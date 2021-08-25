@@ -5,7 +5,7 @@
 	<groupId>com.mt</groupId>
 	<artifactId>maven-web-application</artifactId>
 	<packaging>war</packaging>
-	<version>0.0.2</version>
+	<version>0.0.2-SNAPSHOT</version>
 	
 	<name>maven-web-application</name>
 
@@ -28,7 +28,13 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
 	</properties>
-
+<repositories>
+    <repository>
+        <id>nexus</id>
+        <name>facebook-group</name>
+        <url>http://192.168.1.12:8081/repository/facebook-group/</url>
+    </repository>
+</repositories>
 	<dependencies>
 		
 		<dependency>
@@ -38,6 +44,11 @@
 		</dependency>
 		
 		<!-- test dependencies -->
+<dependency>
+  <groupId>febdev</groupId>
+  <artifactId>dev</artifactId>
+  <version>1.0</version>
+</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
