@@ -1,0 +1,32 @@
+node{
+    
+    def buildNumber = BUILD_NUMBER
+    stage("Git Clone"){
+        git url: 'https://github.com/MithunTechnologiesDevOps/maven-web-application.git'
+    }
+    
+    stage("Maven Build"){
+        def mavenHome= tool name: "maven3.8.2",type: "maven"
+        
+        sh "${mavenHome}/bin/mvn clean package"
+    }
+    stage("Docker Bulid Image"){
+        
+        sh "docker build -t krishhub/maven-web-application:${buildNumber} ."
+    }
+    stage("Docker Login and Push"){
+        withCredentials([string(credentialsId: 'Docker_Hub_Pass', variable: 'Docker_Hub_Pass')]) {
+        sh "docker login -u krishhub -p ${Docker_Hub_Pass}"
+        }
+        sh "docker push krishhub/maven-web-application:${buildNumber}"
+    }
+    stage("Deploy at Docker Container Server"){
+        
+        sshagent(['Docker_Dev_Ubuntu_Server']) {
+    sh "ssh -o StrictHostKeyChecking=no ubuntu@3.109.207.213 docker rm -f mavenwebapp || true"
+    
+    sh "ssh -o StrictHostKeyChecking=no ubuntu@3.109.207.213 docker run -d -p 8080:8080 --name mavenwebapp krishhub/maven-web-application:${buildNumber}"
+    }
+        
+    }
+}
