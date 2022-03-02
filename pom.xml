@@ -29,11 +29,11 @@
 
 	</properties>
 <repositories>
-    <repository>
+   <!-- <repository>
         <id>nexus</id>
         <name>facebook-group</name>
         <url>http://192.168.1.12:8081/repository/facebook-group/</url>
-    </repository>
+    </repository> -->
 </repositories>
 	<dependencies>
 		
