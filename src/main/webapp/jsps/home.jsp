@@ -13,38 +13,36 @@
 <h1 align="center"> This is a test page-here. Testing webhook</h1>
 <hr>
 <br>
-	<h1><h3> Server Side IP Address </h3><br>
+        <h1><h3> Server Side IP Address </h3><br>
 
-<% 
+<%
 String ip = "";
 InetAddress inetAddress = InetAddress.getLocalHost();
 ip = inetAddress.getHostAddress();
-out.println("Server Host Name :: "+inetAddress.getHostName()); 
+out.println("Server Host Name :: "+inetAddress.getHostName());
 %>
 <br>
 <%out.println("Server IP Address :: "+ip);%>
 </h1>
 <hr>
 <div style="text-align: center;">
-	<span>
-		<img src="images/mithunlogo.jpg" alt="" width="100">
-	</span>
-	<span style="font-weight: bold;">
-		Mithun Technologies, 
-		Martha Halli, Above ICICI Bank, Beside Meghana Foods,
-		Bangalore,
-		+91-9980923226
-		devopstrainingblr@gmail.com
-		<br>
-		<a href="mailto:devopstrainingblr@gmail.com">Mail to Mithun Technologies</a>
-	</span>
+        <span>
+                <img src="images/mithunlogo.jpg" alt="" width="100">
+        </span>
+        <span style="font-weight: bold;">
+                Krishnendu Bhomwick
+                +1-000000000
+                demo@gmail.com
+                <br>
+                <a href="mailto:demo@gmail.com">Mail to User</a>
+        </span>
 </div>
 <hr>
-	<p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
+        <p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
 <hr>
 <hr>
-<p align=center>Mithun Technologies - Consultant, Training, Development Center.</p>
-<p align=center><small>Copyrights 2019 by <a href="http://mithuntechnologies.com/">Mithun Technologies</a> </small></p>
+<p align=center>Demo User.</p>
+<p align=center><small>Copyrights 2021 by <a href="#">Demo user</a> </small></p>
 
 </body>
 </html>
