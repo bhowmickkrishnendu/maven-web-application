@@ -44,11 +44,11 @@
 		</dependency>
 		
 		<!-- test dependencies -->
-<dependency>
+<!-- <dependency>
   <groupId>febdev</groupId>
   <artifactId>dev</artifactId>
   <version>1.0</version>
-</dependency>
+</dependency> -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
