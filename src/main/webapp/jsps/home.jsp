@@ -5,7 +5,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Krish- Home Page</title>
-<link href="images/mithunlogo.jpg" rel="icon">
 </head>
 </head>
 <body>
@@ -26,9 +25,6 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
 </h1>
 <hr>
 <div style="text-align: center;">
-        <span>
-                <img src="images/mithunlogo.jpg" alt="" width="100">
-        </span>
         <span style="font-weight: bold;">
                 Krishnendu Bhomwick
                 +1-000000000
@@ -37,9 +33,6 @@ out.println("Server Host Name :: "+inetAddress.getHostName());
                 <a href="mailto:demo@gmail.com">Mail to User</a>
         </span>
 </div>
-<hr>
-        <p> Service : <a href="services/employee/getEmployeeDetails">Get Employee Details </p>
-<hr>
 <hr>
 <p align=center>Demo User.</p>
 <p align=center><small>Copyrights 2021 by <a href="#">Demo user</a> </small></p>
